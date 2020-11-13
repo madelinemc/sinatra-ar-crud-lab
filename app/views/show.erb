@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Article Look Up</title>
+    </head>
+    <body>
+        <h2>Here is the Article You Are Looking For:</h2>
+        <br>
+        <h4><%= @article.title %></h4><br>
+        <p><%= @article.content %></p>
+
+        <form method="POST" action="/articles/<%=@article.id%>">
+        <input id="hidden" type="hidden" name="_method" value="DELETE">
+        <input type="submit" value="delete">
+        </form>
+
+    </body>
+</html>
